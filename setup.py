@@ -37,7 +37,6 @@ setup(
     scripts=["bin/learn"],
     install_requires=[
         "absl-py",
-        "clu",
         "dataclasses",
         "flax",
         "gym",
@@ -45,13 +44,12 @@ setup(
         "jax<=0.2.21",  # tensorflow_probability breaks on jax 0.2.22
         "jaxlib",
         "numpy",
-        "optax",
         "Pillow",
         "pytinyrenderer",
-        "tensorflow_probability[jax]",
     ],
     extras_require={
         "develop": ["pytest", "transforms3d"],
+        "training": ["clu", "optax", "tensorflow_probability[jax]"],
     },
     classifiers=[
         "Development Status :: 4 - Beta",
